@@ -5,10 +5,9 @@ Initial Browser
 Open chrome browser to page
     [Arguments]    ${url}    ${speed}=0.3 
     ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${chrome_options}    add_argument    headless
     Call Method    ${chrome_options}    add_argument    disable-gpu
     SeleniumLibrary.Create Webdriver    Chrome    chrome_options=${chrome_options}
-    SeleniumLibrary.Open Browser    ${url}
+    SeleniumLibrary.Go To    ${url}
     SeleniumLibrary.Maximize Browser Window
     SeleniumLibrary.Set Selenium Speed    ${speed}
 
