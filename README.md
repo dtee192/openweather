@@ -18,7 +18,9 @@ Install library from pip:
   
 ## Run Test
   ```bash
-    robot --include city .\testcases\search.robot
+    robot --include city testcases\search.robot
   ```
   - **_city_** : tag of the test case 
-  - **_.\testcases\search.robot_** : absolutely path to the test case
+  - **_testcases\search.robot_** : absolutely path to the test case
+  
+  **NOTE** : The path of each desktop may be different. Make sure your right click to specify test case -> Copy Relative Path
